@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>CRD Operation</title>
+    <style>
+        #first { 
+
+                text-align: center;
+                float:left;  
+                width:25%; 
+                padding: 20 20 20 20;
+            } 
+            #second{ 
+                text-align: center;
+                float:left;  
+                width:25%; 
+                padding: 20 20 20 20;
+            } 
+            #third{
+                text-align: center; 
+                float:left; 
+                width:25%; 
+                padding: 20 50 20 20;
+            } 
+        button{
+            border-radius : 8px;
+        }
+        div{
+            border-style: solid;
+            border-radius : 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <form action="/create" method="POST">
+            <input type ="text" id="key" name="key" placeholder="Enter the Key">
+            <input type="text" id="value" name="value" placeholder="Enter the Value">
+            <br>
+            <button style = "background-color:blue" type="submit">Create</button>
+        </form>
+    </div>
+    <div id="second">
+        <form action="/read" method = "GET">
+            <input type ="text" id="readKey" name="readKey" placeholder="Enter the Key">
+            <button style="background-color:green" type="Submit">Read</button>
+        </form>
+        <a href = "/readAll">Read All Data in Database</a>
+    </div>
+    <div id="third">
+         <form action="/delete" method = "POST">
+            <input type ="text" id="deleteKey" name="deleteKey" placeholder="Enter the Key">
+            <button style = "background-color:red" type="Submit">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
